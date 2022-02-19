@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic-board</title>
+</head>
+<body>
+    <h1>게시판</h1>
+    <div class="board">
+        <%
+        for(var i=0; i<posts.length; i++)
+        {
+            let data = posts[i];
+        %>
+            <div class='board-post'>
+                <p>작성자: <%=data.writer%></p>
+                <p>제목: <a href="/board/post/<%=data._id%>"><%=data.title%></a></p>
+                <p>내용: <%=data.contents%></p>
+                <p>작성일: <%=data.createdAt%></p>
+                <p>수정일: <%=data.updatedAt%></p>
+            </div>
+            <hr>
+            <br>
+        <%}%>
+    </div>
+    <a href="/board/post">글쓰기</a>
+  </body>
+</html>
