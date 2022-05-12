@@ -1,0 +1,24 @@
+ components:
+    schemas:
+        board:
+            type: object
+            required:
+                - title
+                - contents
+                - writer
+            properties:
+                id:
+                    type: integer
+                    description: The auto-generated id.
+                title:
+                    type: string
+                    required: true
+                    description: The title of board.
+                contents:
+                    type: string
+                    required: true
+                    description: contents of post.
+                writer:
+                    type: string
+                    required: true
+                    description: who wrote the post?

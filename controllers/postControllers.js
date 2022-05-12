@@ -76,7 +76,7 @@ const getOnePost = async (req, res) => {
 
 // 게시물들 중에서 특정 게시물 삭제 , HTTP method : DELETE
 // post/:postID
-const deleteOnePost = async (req, res) => {
+const deleteOnePost = async (req, res ) => {
   try {
     const {
       params: { postId },
